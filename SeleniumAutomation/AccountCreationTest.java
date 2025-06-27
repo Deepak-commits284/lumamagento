@@ -39,11 +39,11 @@ public class AccountCreationTest {
     public static void createValidAccount(WebDriver driver) {
         driver.navigate().to("https://magento.softwaretestingboard.com/customer/account/create/");
         ElementLocator.createAccount(driver).click();
-        ElementLocator.firstName(driver).sendKeys("test");
+        ElementLocator.firstName(driver).sendKeys("demo");
         ElementLocator.lastName(driver).sendKeys("user");
-        ElementLocator.email(driver).sendKeys("testuser@gmail.com");
-        ElementLocator.password(driver).sendKeys("tu!@62725");
-        ElementLocator.confirmPassword(driver).sendKeys("tu!@62725");
+        ElementLocator.email(driver).sendKeys("demouser@27625gmail.com");
+        ElementLocator.password(driver).sendKeys("du!@#27625");
+        ElementLocator.confirmPassword(driver).sendKeys("du!@#27625");
         ElementLocator.saveAccount(driver).click();
 
         // Verify if the user is redirected correctly
@@ -72,8 +72,8 @@ public class AccountCreationTest {
     // Sign in to the account
     public static void signInAccount(WebDriver driver) {
         ElementLocator.signInPage(driver).click();
-        ElementLocator.emailSignIn(driver).sendKeys("testuser@gmail.com");
-        ElementLocator.passwordSignIn(driver).sendKeys("tu!@62725");
+        ElementLocator.emailSignIn(driver).sendKeys("demouser@27625gmail.com");
+        ElementLocator.passwordSignIn(driver).sendKeys("du!@#27625");
         ElementLocator.signInButton(driver).click();
 
         // Verify if the user is redirected correctly
@@ -93,9 +93,9 @@ public class AccountCreationTest {
         driver.navigate().to("https://magento.softwaretestingboard.com/customer/account/edit/changepass/1/");
         scrollPage(driver, 600);
 
-        ElementLocator.currentPassword(driver).sendKeys("tu!@62725");
-        ElementLocator.password(driver).sendKeys("tu!@1881999");
-        ElementLocator.confirmPassword(driver).sendKeys("tu!@1881999");
+        ElementLocator.currentPassword(driver).sendKeys("du!@#27625");
+        ElementLocator.password(driver).sendKeys("demo!@#27625");
+        ElementLocator.confirmPassword(driver).sendKeys("demo!@#1234");
         ElementLocator.saveAccount(driver).click();
 
         // Verify if the password change was successful
